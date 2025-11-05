@@ -17,6 +17,9 @@
             color: #e0e0e0;
             background: #0a0a0a;
             min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  /* full screen height */
         }
 
         .container {
@@ -119,6 +122,7 @@
         }
 
         .cta-button {
+            margin-top: 2rem;
             display: inline-block;
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             color: #1a1a1a;
@@ -670,6 +674,44 @@
                 grid-template-columns: 1fr;
             }
         }
+        .typing-container {
+        font-size: 38px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: linear-gradient(90deg, #ff6b6b, #ffd93d, #4ecdc4, #5e60ce);
+        background-size: 300%;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: gradientMove 4s infinite linear;
+
+        text-shadow:
+            0 0 2px rgba(255,255,255,0.18),
+            0 0 4px rgba(255, 255, 255, 0.12);
+        }
+
+        @keyframes gradientMove {
+        0% { background-position: 0%; }
+        100% { background-position: 300%; }
+        }
+
+        /* Stylish bar cursor animation */
+        .cursor {
+        width: 5px;
+        height: 45px;
+        margin-left: 6px;
+        background: #ffffff;
+        border-radius: 2px;
+        animation: cursorBlink 0.6s infinite;
+        }
+
+        @keyframes cursorBlink {
+        0%, 50% { opacity: 1; }
+        50.01%, 100% { opacity: 0; }
+        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -693,7 +735,11 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Sanjeev Koshti</h1>
-            <p>BCA Student & Web Developer</p>
+            <div class="typing-container">
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <audio id="type-sound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
             <a href="#projects" class="cta-button">View My Work</a>
         </div>
     </section>
@@ -1156,6 +1202,51 @@
 
         // Initialize particles
         createParticles();
+
+
+        const texts = [
+        "BCA Student",
+        "Web Developer",
+        "Problem Solver"
+        ];
+
+        let index = 0;
+let charIndex = 0;
+const typingSpeed = 110;
+const eraseSpeed = 80;
+const delayBetweenTexts = 1000;
+
+const typingText = document.getElementById("typing-text");
+const typeSound = document.getElementById("type-sound");
+
+function type() {
+  if (charIndex < texts[index].length) {
+    typingText.textContent += texts[index].charAt(charIndex);
+    charIndex++;
+
+    // play typing sound
+    typeSound.currentTime = 0;
+    typeSound.play();
+
+    setTimeout(type, typingSpeed);
+  } else {
+    setTimeout(erase, delayBetweenTexts);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typingText.textContent = texts[index].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, eraseSpeed);
+  } else {
+    index = (index + 1) % texts.length;
+    setTimeout(type, typingSpeed);
+  }
+}
+
+type();
+
     </script>
 </body>
 </html>
