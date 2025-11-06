@@ -739,7 +739,6 @@
                 <span id="typing-text"></span>
                 <span class="cursor">|</span>
             </div>
-            <audio id="type-sound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
             <a href="#projects" class="cta-button">View My Work</a>
         </div>
     </section>
@@ -812,8 +811,8 @@
                             <span class="tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://sanjukoshti.github.io/MiniProjects/" target="_blank" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Sanjukoshti/MiniProjects" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://sanjeevkoshti.github.io/MiniProjects/" target="_blank" class="project-link">Live Demo</a>
+                            <a href="https://github.com/Sanjeevkoshti/MiniProjects" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -836,29 +835,28 @@
                         </div>
                         <div class="project-links">
                             <a href="https://sk-resume-builder.free.nf/" target="_blank" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Sanjukoshti/ResumeBuilder" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://github.com/Sanjeevkoshti/ResumeBuilder" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img weather">
                         <div style="z-index: 1; position: relative;">
-                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌤️</div>
-                            <div>Weather Dashboard</div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎮</div>
+                            <div>Tic Tac Toe games</div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">WeatherNow</h3>
-                        <p class="project-description">A beautiful weather dashboard with location-based forecasts and interactive charts.</p>
+                        <h3 class="project-title">Tic Tac Toe</h3>
+                        <p class="project-description">I built a multi-level Tic-Tac-Toe web game that includes 3x3, 4x4, and 5x5 boards. Players can choose their preferred difficulty and enjoy a smooth, interactive gameplay experience in one platform.</p>
                         <div class="project-tags">
                             <span class="tag">JavaScript</span>
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
-                            <span class="tag">OpenWeather API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://sanjukoshti.github.io/WeatherApp/" target="_blank" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Sanjukoshti/WeatherApp" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://sanjeevkoshti.github.io/TicTacToe/" target="_blank" class="project-link">Live Demo</a>
+                            <a href="https://github.com/Sanjeevkoshti/TicTacToe" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -880,7 +878,7 @@
                     <!-- <a href="https://drive.google.com/file/d/1H58ZXFUoVI4NoVb58b-401227jwgzktU/view?usp=drive_link" target="_blank" class="resume-btn" onclick="downloadResume()">
                         <i class="fas fa-download"></i>Download Resume -->
                     </a>
-                    <a href="https://drive.google.com/file/d/1H58ZXFUoVI4NoVb58b-401227jwgzktU/view?usp=drive_link" target="_blank" class="resume-btn">
+                    <a href="https://drive.google.com/file/d/10XSo7eXgsrUEz7mK3GhP5b-wROJTlMJy/view?usp=sharing" target="_blank" class="resume-btn">
                         View Resume
                     </a>
                 </div>
@@ -1063,7 +1061,7 @@
         <div class="container">
             <div class="social-links">
                 <a href="mailto:sanjukoshti734@gmail.com" class="social-link" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                <a href="linkedin.com/in/sanjeev-koshti-0bb53b356" class="social-link" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/sanjeev-koshti-0bb53b356/" class="social-link" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/Sanjukoshti" class="social-link" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.instagram.com/mr_san_jeeva9890/" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.facebook.com/share/19R3qUDtdZ/" class="social-link" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -1075,7 +1073,7 @@
     <script>
         document.getElementById("downloadBtn").addEventListener("click", function () {
         // Replace 'resume.pdf' with the actual path to your resume file
-        const fileId = "1H58ZXFUoVI4NoVb58b-401227jwgzktU";
+        const fileId = "10XSo7eXgsrUEz7mK3GhP5b-wROJTlMJy";
         const link = document.createElement("a");
         link.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
         link.download = "My_Resume.pdf"; // Suggested filename
@@ -1223,10 +1221,6 @@ function type() {
   if (charIndex < texts[index].length) {
     typingText.textContent += texts[index].charAt(charIndex);
     charIndex++;
-
-    // play typing sound
-    typeSound.currentTime = 0;
-    typeSound.play();
 
     setTimeout(type, typingSpeed);
   } else {
