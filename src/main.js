@@ -188,3 +188,4 @@ window.addEventListener('scroll', () => {
 });
 
 console.log('🚀 Portfolio initialized — Built with Three.js, GSAP & Passion');
+
