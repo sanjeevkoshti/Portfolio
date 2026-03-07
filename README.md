@@ -76,6 +76,7 @@ The optimized files will be generated in the `dist/` directory.
 └── package.json        # Dependencies and scripts
 ```
 ## 👤 Author
+
 **Sanjeev Koshti**
 - **BCA Student** @ B R Darur First Grade College
 - [GitHub](https://github.com/Sanjeevkoshti)
@@ -84,4 +85,5 @@ The optimized files will be generated in the `dist/` directory.
 
 ## 📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 
