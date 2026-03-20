@@ -270,20 +270,38 @@
                         </a>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4" data-animate="fade-left" data-delay="200">
-                    <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl">6th</span>
-                        <p class="text-slate-500 text-sm mt-2">Semester BCA</p>
+                <div class="flex flex-col gap-8" data-animate="fade-left" data-delay="200">
+                    <!-- Profile Image -->
+                    <div class="profile-image-wrapper mx-auto">
+                        <div class="profile-image-container">
+                            <div class="profile-image-glow"></div>
+                            <div class="profile-image-border">
+                                <img src="/assets/profile.jpg" alt="Sanjeev Koshti"
+                                    class="profile-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <!-- Fallback avatar if image not found -->
+                                <div class="profile-image-fallback" style="display:none;">
+                                    <span class="text-5xl font-space font-bold bg-gradient-to-br from-cyan-400 to-violet-400 bg-clip-text text-transparent">SK</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl"
-                            data-count="8">0+</span>
-                        <p class="text-slate-500 text-sm mt-2">Mini Projects</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl"
-                            data-count="10">0+</span>
-                        <p class="text-slate-500 text-sm mt-2">Github repositories</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl">∞</span>
-                        <p class="text-slate-500 text-sm mt-2">Passion</p>
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl">6th</span>
+                            <p class="text-slate-500 text-sm mt-2">Semester BCA</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl"
+                                data-count="8">0+</span>
+                            <p class="text-slate-500 text-sm mt-2">Mini Projects</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl"
+                                data-count="10">0+</span>
+                            <p class="text-slate-500 text-sm mt-2">Github repositories</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl text-center"><span class="stat-number text-3xl">∞</span>
+                            <p class="text-slate-500 text-sm mt-2">Passion</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -397,6 +415,46 @@
                     </div>
                     <h3 class="font-semibold text-white text-sm mb-1">Canva</h3>
                     <p class="text-slate-500 text-xs">Design</p>
+                </div>
+                <div class="skill-card glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="icon-wrapper w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400/15 to-blue-600/15 group-hover:from-cyan-400/25 group-hover:to-blue-600/25 transition-all duration-300">
+                        <span class="text-xl font-bold text-cyan-400 font-mono">⚛</span>
+                    </div>
+                    <h3 class="font-semibold text-white text-sm mb-1">React</h3>
+                    <p class="text-slate-500 text-xs">Frontend</p>
+                </div>
+                <div class="skill-card glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="icon-wrapper w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-green-500/15 to-emerald-600/15 group-hover:from-green-500/25 group-hover:to-emerald-600/25 transition-all duration-300">
+                        <span class="text-xl font-bold text-green-400 font-mono">⬢</span>
+                    </div>
+                    <h3 class="font-semibold text-white text-sm mb-1">Node.js</h3>
+                    <p class="text-slate-500 text-xs">Runtime</p>
+                </div>
+                <div class="skill-card glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="icon-wrapper w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-gray-400/15 to-slate-500/15 group-hover:from-gray-400/25 group-hover:to-slate-500/25 transition-all duration-300">
+                        <span class="text-xl font-bold text-gray-300 font-mono">Ex</span>
+                    </div>
+                    <h3 class="font-semibold text-white text-sm mb-1">Express</h3>
+                    <p class="text-slate-500 text-xs">Backend</p>
+                </div>
+                <div class="skill-card glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="icon-wrapper w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-400/15 to-indigo-600/15 group-hover:from-blue-400/25 group-hover:to-indigo-600/25 transition-all duration-300">
+                        <span class="text-xl font-bold text-blue-300 font-mono">🐘</span>
+                    </div>
+                    <h3 class="font-semibold text-white text-sm mb-1">PostgreSQL</h3>
+                    <p class="text-slate-500 text-xs">Database</p>
+                </div>
+                <div class="skill-card glass-card p-6 rounded-2xl text-center group">
+                    <div
+                        class="icon-wrapper w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400/15 to-green-600/15 group-hover:from-emerald-400/25 group-hover:to-green-600/25 transition-all duration-300">
+                        <span class="text-xl font-bold text-emerald-400 font-mono">⚡</span>
+                    </div>
+                    <h3 class="font-semibold text-white text-sm mb-1">Supabase</h3>
+                    <p class="text-slate-500 text-xs">BaaS</p>
                 </div>
             </div>
         </div>
@@ -607,13 +665,8 @@
 
     <!-- Footer -->
     <footer class="py-8 px-6 border-t border-slate-800/30">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center gap-4">
             <p class="text-slate-500 text-sm">© 2026 Sanjeev Koshti. All rights reserved.</p>
-            <p class="text-slate-600 text-sm flex items-center gap-2">Built with
-                <span
-                    class="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent font-medium">Three.js
-                    & GSAP</span>
-            </p>
         </div>
     </footer>
 
