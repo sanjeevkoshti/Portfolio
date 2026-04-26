@@ -187,4 +187,21 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// ═══════════════════════════════════════
+// JOURNEY ACCORDION LOGIC
+// ═══════════════════════════════════════
+window.toggleJourney = function(element) {
+    const isActive = element.classList.contains('active');
+    
+    // Close all other accordions
+    document.querySelectorAll('.journey-accordion').forEach(acc => {
+        acc.classList.remove('active');
+    });
+    
+    // Toggle current
+    if (!isActive) {
+        element.classList.add('active');
+    }
+};
+
 console.log('🚀 Portfolio initialized — Built with Three.js, GSAP & Passion');
